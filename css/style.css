@@ -1,0 +1,752 @@
+@import 'header__slider.css';
+@import 'rooms__slider.css';
+@import 'tips__slider.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
+}
+
+.justify_space-between {
+    justify-content: space-between;
+}
+
+.justify_space-around {
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header {
+    background: url('../img/header/header-bg.png');
+    background-size: cover;
+    padding-top: 40px;
+}
+
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav_left {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav_right {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
+}
+
+
+.header__nav_logo {
+    font-family: 'Gilroy';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: black;
+    margin-right: 40px;
+}
+
+.header__nav_link {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #3A3A3A;
+    margin-right: 40px;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.header__nav_link:hover {
+    color: #000000;
+}
+
+.header__nav_input-block {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav_search {
+    padding: 12px 0;
+    outline: none;
+    border: none;
+
+    font-family: 'Gilroy';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 440px;
+}
+
+.header__nav_search-icon {
+    padding: 12px;
+    background: white;
+    width: 20px;
+    height: 20px;
+}
+
+.header__nav_img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.header__nav_list {
+
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 100%;
+    right: -20px;
+    z-index: 4;
+    background: white;
+    border: 1px rgba(0, 0, 0, 0.06) solid;
+}
+
+.header__nav_list li {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.1s;
+}
+
+.header__nav_list li:hover {
+    background: #E89F71;
+}
+
+.header__nav_list li:hover a {
+    color: white;
+}
+
+.header__nav_list-link {
+    display: inline-block;
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #3A3A3A;
+    cursor: pointer;
+    transition: color 0.1s;
+
+}
+
+.header__content {
+    padding-top: 60px;
+    position: relative;
+}
+
+.header__content_card {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(30px);
+    padding: 44px 55px 66px 55px;
+    user-select: none;
+}
+
+.header__content_title {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 67px;
+    max-width: 380px;
+    margin-bottom: 16px;
+    color: #3A3A3A;
+}
+
+.header__content_descr {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 350px;
+    margin-bottom: 48px;
+    color: #898989;
+}
+
+.header__content_link {
+    width: 100%;
+    padding: 24px 0;
+    text-align: center;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    background: #E89F71;
+    border: 2px transparent solid;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.header__content_link:hover {
+    background: #fff;
+    color: #E89F71;
+    border: 2px #E89F71 solid;
+}
+
+.header__content_price-block {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(30px);
+    width: 250px;
+    padding: 24px;
+}
+
+.header__content_price-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 4px;
+    color: #3A3A3A;
+}
+
+.header__content_price-descr {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+    color: #616161;
+}
+
+.header__content_price h3 {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #3A3A3A;
+}
+
+.header__content_price {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.why {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 0;
+}
+
+.why_block {
+    display: flex;
+    align-items: center;
+}
+
+.why_text-block {
+    margin-left: 24px;
+}
+
+.why_title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+
+
+    color: #3A3A3A;
+}
+
+.why_descr {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+
+    color: #898989;
+}
+
+.h2_title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+
+
+
+    color: #3A3A3A;
+}
+
+.products .h2_title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.products_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.products_card {
+    background: #F4F5F7;
+    grid-column: span 1;
+    position: relative;
+}
+
+.products_card:hover .products_hover {
+
+    opacity: 1;
+
+}
+
+
+
+
+.products_card img {
+    width: 100%;
+}
+
+.products_card-body {
+    padding: 16px 16px 30px 16px;
+}
+
+.products_card-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 8px;
+
+
+    color: #3A3A3A;
+}
+
+.products_card-descr {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+
+    color: #898989;
+}
+
+.products_card-price {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+
+
+    position: relative;
+    color: #3A3A3A;
+}
+
+.products_card-price span {
+    font-size: 15px;
+    color: #3a3a3a42;
+    position: relative;
+    margin-left: 16px;
+}
+
+.products_card-price span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #3a3a3a42;
+}
+
+.products_discount {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #E97171;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products_discount p {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+}
+
+.products_new {
+    background: #2EC1AC;
+}
+
+.products_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    height: 100%;
+    padding: 0 40px;
+    background: #3a3a3a83;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: opacity 0.3s;
+    z-index: 3;
+}
+
+.products_hover-btn {
+    padding: 12px 55px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+
+    color: #E89F71;
+    background: white;
+    transition: background 0.2s, color 0.2s;
+}
+
+.products_hover-btn:hover {
+    background: #E89F71;
+    color: white;
+}
+
+.products_hover-link {
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0 8px;
+
+    color: #FFFFFF;
+}
+
+.products_hover-actions {
+    display: flex;
+    align-items: center;
+}
+
+.show_more-block {
+    max-width: 250px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 32px;
+    background: #FFFFFF;
+    border: 1px solid #E89F71;
+    transition: background 0.2s;
+}
+
+.show_more {
+    padding: 12px 82px;
+
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #E89F71;
+
+    transition: color 0.2s;
+}
+
+.show_more-block:hover {
+    background: #E89F71;
+}
+
+.show_more-block:hover .show_more {
+    color: white;
+}
+
+
+
+.rooms__container {
+    display: flex;
+    position: relative;
+}
+
+.rooms__section {
+    margin-top: 44px;
+    padding: 44px 0;
+    background: #FCF8F3;
+}
+
+.rooms__textblock {
+    max-width: 378px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rooms__textblock h2 {
+    margin-bottom: 8px;
+}
+
+.rooms__descr {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+
+    color: #616161;
+}
+
+.rooms__btn {
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 12px 40px;
+    background: #E89F71;
+    border: 2px transparent solid;
+    color: #FFFFFF;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.rooms__btn:hover {
+    color: #E89F71;
+    border: 2px #E89F71 solid;
+    background: #FFFFFF;
+}
+
+.rooms__card-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+
+    color: #3A3A3A;
+}
+
+.rooms__card_descr-block {
+    display: flex;
+    align-items: center;
+}
+
+.rooms__card_descr-block h3 {
+    display: inline-block;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #616161;
+}
+
+.rooms__card_descr-block hr {
+    height: 1px;
+    width: 27px;
+    margin: 0 8px;
+    background: #616161;
+    border: none;
+}
+
+
+
+
+.tips__section {
+    padding: 44px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+
+.furniture__section {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 90px;
+}
+
+.furniture_container img {
+    width: 100%;
+
+}
+
+.furniture_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.furniture_textblock {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+    text-align: center;
+
+    color: #616161;
+}
+
+
+
+
+.pre-footer_line {
+    height: 2px;
+    background: #D8D8D8;
+    border: none;
+}
+
+.footer {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list {
+    max-width: 250px;
+}
+
+.footer__list li {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__list li svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.footer__list_title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+
+
+    color: #000000;
+}
+
+.footer__list:nth-of-type(1) .footer__list_link {
+    font-weight: 400;
+}
+
+.footer__list_link {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+
+
+    color: #616161;
+    transition: color 0.1s;
+}
+.footer__list_link:hover{
+    color: black;
+}
+
+.footer__list_input {
+    padding: 10px 12px;
+    max-height: 45px;
+    width: 240px;
+    background: #F4F5F7;
+    border: none;
+    outline: none;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #828282;
+}
+
+.footer__list_btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    outline: none;
+    border: none;
+    background: #E89F71;
+}

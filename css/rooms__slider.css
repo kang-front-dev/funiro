@@ -1,0 +1,55 @@
+.slick-slide {
+    transition: transform 0.3s;
+}
+
+
+.rooms__slider-item {
+    margin: 0 -20px;
+    padding: 30px;
+    transform: scale(0.9);
+}
+
+.rooms__slider {
+    max-width: 800px;
+    margin-left: 86px;
+    padding-left: 12px;
+    overflow: hidden;
+}
+
+.rooms__slider_dots {
+    position: absolute;
+    top: 93%;
+    right: 12.7%;
+}
+
+.rooms__slider_arrow-right {
+    position: absolute;
+    top: 44%;
+    right: 5%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+}
+
+.rooms__slider .slick-track {
+    display: flex;
+
+}
+
+.rooms__slider .slick-list {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-transform {
+    transform: scale(1.2);
+}
+
+
+.rooms__card-block {
+    position: absolute;
+    top: 67.5%;
+    left: 36.5%;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(3px);
+}
