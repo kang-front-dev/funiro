@@ -45,11 +45,3 @@
 }
 
 
-.rooms__card-block {
-    position: absolute;
-    top: 67.5%;
-    left: 36.5%;
-    padding: 32px;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(3px);
-}

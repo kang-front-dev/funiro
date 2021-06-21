@@ -1,0 +1,104 @@
+
+
+
+@media (max-width: 1280px){
+    .container{
+        max-width: 1050px;
+    }
+    .header__nav_search {
+        padding: 12px 0;
+        outline: none;
+        border: none;
+        margin-right: 10px;
+    
+        font-family: 'Gilroy';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        width: 300px;
+    }
+    .header__nav_link{
+        margin-right: 20px;
+    }
+    .header__content .slider_indicators{
+
+        margin-left: 50%;
+    }
+    .header__content_card{
+        padding: 40px 50px 60px 50px;
+    }
+    .products_hover-btn{
+        padding: 12px 20px;
+
+    }
+    .rooms__slider_dots {
+        top: 93%;
+        right: 10.7%;
+    }
+}
+@media (max-width: 1120px){
+    .container{
+        max-width: 900px;
+    }
+    .products_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+    .header {
+        background-position-x: -200px;
+    }
+    .products_hover{
+        display: none;
+    }
+    .header__content .slider_indicators{
+
+        margin-left: 60%;
+    }
+
+    .header__nav_link{
+        display: none;
+    }
+
+    .header__nav_right{
+        margin-left: 50px;
+    }
+    .rooms__slider_dots {
+        top: 93%;
+        right: 0%;
+    }
+    .slider_dots .slick-dots li {
+        margin: 0 12px;
+    }
+
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 800px;
+    }
+    .header__content .slider_indicators{
+
+        margin-left: 65%;
+    }
+    .header__nav_search {
+        width: 200px;
+    }
+
+
+    .header__nav_link{
+        display: none;
+    }
+
+    .header__nav_right{
+        margin-left: 50px;
+    }
+    .rooms__card-block{
+        top: 70%;
+        left: 40%;
+    }
+    .rooms__slider_dots {
+        top: 93%;
+        left: -75%;
+    }
+}

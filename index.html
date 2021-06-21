@@ -8,6 +8,7 @@
     <title>Funiro</title>
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
                         </ul>
 
                     </div>
-                    <a href="#" class="header__nav_link">Inspirations</a>
+                    <a href="#" id="inspirations" class="header__nav_link">Inspirations</a>
                     <div class="header__nav_input-block">
                         <a href="#" class="header__nav_search-icon">
                             <svg width="20" height="20" viewBox="0 0 16 16" fill="none"
@@ -103,9 +104,15 @@
                     <a href="#" class="header__nav_profile">
                         <img src="img/чумкачбоб.jpg" alt="" class="header__nav_img">
                     </a>
+                    <div class="header__nav_burger">
+                        <span></span>
+                    </div>
 
                 </div>
             </nav>
+
+
+
             <div class="header__content">
                 <div class="slider_indicators">
                     <div class="slider_dots header__slider_dots">
@@ -185,6 +192,19 @@
 
         </div>
     </header>
+    <div class="side-bar">
+        <a href="#" class="side-bar_link">
+            Products
+        </a>
+        <hr>
+        <a href="#" class="side-bar_link">
+            Rooms
+        </a>
+        <hr>
+        <a href="#" class="side-bar_link">
+            Inspirations
+        </a>
+    </div>
     <div class="container">
         <div class="why">
 
@@ -936,7 +956,7 @@
             <ul class="footer__list">
                 <li>
                     <h3 class="footer__list_title">
-                        Stay Connected
+                        Connect Us
                     </h3>
                 </li>
                 <li>
@@ -981,6 +1001,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/scriptSlick.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
