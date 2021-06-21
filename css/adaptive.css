@@ -59,7 +59,9 @@
     .header__nav_link{
         display: none;
     }
-
+    .header__nav_burger{
+        display: block;
+    }
     .header__nav_right{
         margin-left: 50px;
     }
@@ -85,7 +87,9 @@
         width: 200px;
     }
 
-
+    .header__nav_burger{
+        display: block;
+    }
     .header__nav_link{
         display: none;
     }
